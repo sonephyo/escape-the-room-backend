@@ -3,9 +3,9 @@ from typing import List
 from fastapi import FastAPI, HTTPException
 import httpx
 
-from models import Character, CharacterResponse, PuzzleResponse
-from db import lifespan
-from utils import get_puzzle
+from app.models import Character, CharacterResponse, PuzzleResponse
+from app.db import lifespan
+from app.utils import get_puzzle
 
 # creating a server with python FastAPI
 app = FastAPI(lifespan=lifespan)
